@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101628">
+  <meta name="description" content="30 ідей випускних ІТ-проєктів для учнів 11 класу: фільтри, повні паспорти та критерії вибору.">
+  <title>Каталог випускних ІТ-проєктів — OR Learning Lab</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#catalog">Перейти до каталогу</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="OR Learning Lab — на початок">
+        <img src="logo.svg" width="40" height="40" alt="">
+        <span><strong>OR Learning Lab</strong><small>Випускні ІТ-проєкти</small></span>
+      </a>
+      <nav aria-label="Основна навігація">
+        <a href="#catalog">Каталог</a>
+        <a href="#requirements">Вимоги</a>
+        <a href="#process">Етапи роботи</a>
+      </nav>
+    </div>
+  </header>
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-layout">
+        <div>
+          <p class="eyebrow">БАНК ІДЕЙ · 11 КЛАС</p>
+          <h1 id="hero-title">Ідеї, що стають <span>цифровими продуктами.</span></h1>
+          <p class="lead">30 актуальних тем для випускних робіт. Не інтернет-магазини й не сайти-візитівки, а застосунки, які вирішують реальні проблеми.</p>
+          <div class="hero-actions"><a class="button primary" href="#catalog">Обрати проєкт <span aria-hidden="true">↗</span></a><a class="button ghost" href="#requirements">Переглянути вимоги</a></div>
+        </div>
+        <aside class="hero-panel" aria-label="Ключові параметри">
+          <div class="stat"><strong>30</strong><span>проєктів</span></div>
+          <div class="stat"><strong>6</strong><span>напрямів</span></div>
+          <div class="stat"><strong>1–2</strong><span>учні в команді</span></div>
+          <p>Міркуй. Кодуй. Перевіряй.</p>
+        </aside>
+      </div>
+    </section>
+    <section class="catalog-section container" id="catalog" aria-labelledby="catalog-title">
+      <div class="section-heading"><div><p class="eyebrow">ЗНАЙДИ СВОЮ ІДЕЮ</p><h2 id="catalog-title">Каталог проєктів</h2></div><p id="results-count" class="results-count" role="status" aria-live="polite">Завантаження…</p></div>
+      <form id="filters" class="filters" role="search" aria-label="Пошук і фільтри проєктів">
+        <div class="field search-field"><label for="search">Пошук за назвою або описом</label><input id="search" type="search" placeholder="Наприклад: кібербезпека, карта, ШІ…" autocomplete="off"></div>
+        <div class="field"><label for="category">Напрям</label><select id="category"><option value="">Усі напрями</option></select></div>
+        <div class="field"><label for="level">Складність</label><select id="level"><option value="">Усі рівні</option><option>Базовий</option><option>Середній</option><option>Підвищений</option></select></div>
+        <button type="reset" class="button reset">Скинути</button>
+      </form>
+      <div id="project-grid" class="project-grid" aria-live="off"></div>
+      <p id="empty-state" class="empty-state" hidden>За цими параметрами проєктів не знайдено. Змініть фільтри або скиньте пошук.</p>
+      <noscript><p class="notice">Для інтерактивного каталогу потрібен JavaScript. Паспорти доступні також у файлі projects.json.</p></noscript>
+    </section>
+    <section class="info-section" id="requirements" aria-labelledby="requirements-title">
+      <div class="container"><p class="eyebrow">СПІЛЬНИЙ СТАНДАРТ</p><h2 id="requirements-title">Що має бути у випускному проєкті?</h2>
+        <ul class="requirements-grid">
+          <li><strong>Реальна проблема</strong><span>Зрозуміло, для кого й навіщо створено продукт.</span></li>
+          <li><strong>UI/UX</strong><span>Прототип у Figma, адаптивність і доступність.</span></li>
+          <li><strong>Три сценарії</strong><span>Не менше трьох завершених дій користувача.</span></li>
+          <li><strong>Робота з даними</strong><span>Збереження, пошук, обробка або візуалізація.</span></li>
+          <li><strong>Тестування</strong><span>Перевірені функції та обробка помилок.</span></li>
+          <li><strong>Захист</strong><span>Робоча демонстрація, GitHub і пояснення власного коду.</span></li>
+        </ul>
+      </div>
+    </section>
+    <section class="process-section container" id="process" aria-labelledby="process-title"><p class="eyebrow">ВІД ІДЕЇ ДО ЗАХИСТУ</p><h2 id="process-title">Етапи роботи</h2><ol class="steps"><li>Вибір теми й дослідження проблеми</li><li>Затвердження паспорта та MVP</li><li>Проєктування інтерфейсу у Figma</li><li>Розроблення та ведення Git-репозиторію</li><li>Тестування й удосконалення</li><li>Демонстрація та захист</li></ol></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><span>OR Learning Lab · Каталог випускних проєктів</span><span>Міркуй. Кодуй. Перевіряй.</span></div></footer>
+  <dialog id="passport-dialog" aria-labelledby="dialog-title"><div class="dialog-shell"><div class="dialog-top"><span class="eyebrow">ПАСПОРТ ВИПУСКНОГО ПРОЄКТУ</span><button id="close-dialog" type="button" class="close-button" aria-label="Закрити паспорт">×</button></div><div id="dialog-content"></div><div class="dialog-actions"><button type="button" id="print-passport" class="button primary">Друкувати / PDF</button><button type="button" id="copy-passport" class="button ghost">Копіювати паспорт</button></div></div></dialog>
+</body>
+</html>
